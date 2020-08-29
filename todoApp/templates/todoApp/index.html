@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} TO DO LIST {% endblock %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+<!--    <h3>Add Items to a to-do list</h3>-->
+    <div class="rowofitems" id="listofitems">
+        <h3>Add Items to a to-do list</h3>
+
+        <form class="form-inline">
+          <label class="sr-only" for="inlineFormInputName2">Name</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Enter Item...">
+
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
