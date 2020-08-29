@@ -7,15 +7,22 @@
 {% block body %}
 <div class="container">
 <!--    <h3>Add Items to a to-do list</h3>-->
-    <div class="rowofitems" id="listofitems">
-        <h3>Add Items to a to-do list</h3>
+    <div class="rowofitems mt-4" id="listofitems">
+        <h3>Add Items</h3>
 
-        <form class="form-inline">
+        <form class="form-inline mt-4" action="add_item/" method="post">
           <label class="sr-only" for="inlineFormInputName2">Name</label>
-          <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Enter Item...">
+          <input type="text" name="content" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Enter Item...">
 
           <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
+    </div>
+    <div class="listofgroups mt-4">
+        <ul class="list-group">
+            {% for todo_item in todo_items %}
+            <li class="list-group-item">{{ todo_item.text }}</li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock %}
