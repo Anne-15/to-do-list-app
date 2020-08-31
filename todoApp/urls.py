@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('add_item/', views.add_item),
+    path('delete_item/<int:todo_id>', views.delete_item),
 ]
